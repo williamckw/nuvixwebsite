@@ -1,0 +1,2 @@
+Keep your existing file named nuvix-logo.png in this folder.
+Website path: /assets/images/nuvix-logo.png
