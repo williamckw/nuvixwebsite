@@ -413,3 +413,20 @@ html,body{margin:0!important;padding:0!important;width:100%;min-height:100%;back
 .nx-service-card.nx-list > p { display: block; margin-bottom: 18px; font-weight: 400; letter-spacing: normal; }
 
 .nx-service-visual__note { color: var(--m); font-size: .85rem; }
+
+.nx-service-example { align-items: center; }
+.nx-service-example .nx-service-visual { width: min(100%, 440px); justify-self: center; }
+.nx-service-example h2 { margin-top: 0; }
+.nx-scard .nx-neon-icon {
+  display: grid;
+  place-items: center;
+  color: #d1b6ff;
+  background: rgba(144, 92, 255, .12);
+  border: 1px solid rgba(173, 122, 255, .42);
+  box-shadow: 0 0 18px rgba(156, 93, 255, .23), inset 0 0 12px rgba(128, 92, 255, .13);
+}
+.nx-scard .nx-neon-icon svg { width: 24px; height: 24px; filter: drop-shadow(0 0 4px #935dff); }
+.nx-scard:nth-child(even) .nx-neon-icon { color: #9beeff; border-color: rgba(101, 218, 255, .38); }
+.nx-scard:nth-child(even) .nx-neon-icon svg { filter: drop-shadow(0 0 4px #56c9ff); }
+
+.nx-pagehead .nx-service-visual img, .nx-service-card__image img { aspect-ratio: 16 / 9; }
