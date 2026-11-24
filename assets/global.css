@@ -430,3 +430,29 @@ html,body{margin:0!important;padding:0!important;width:100%;min-height:100%;back
 .nx-scard:nth-child(even) .nx-neon-icon svg { filter: drop-shadow(0 0 4px #56c9ff); }
 
 .nx-pagehead .nx-service-visual img, .nx-service-card__image img { aspect-ratio: 16 / 9; }
+
+/* Six-step process: complete rows and dividers at each breakpoint. */
+.nx-process:has(> div:nth-child(6):last-child) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.nx-process:has(> div:nth-child(6):last-child) > div {
+  min-height: 0;
+  padding: clamp(22px, 2.8vw, 38px);
+  border: 0 !important;
+  border-inline-end: 1px solid var(--l) !important;
+  border-block-end: 1px solid var(--l) !important;
+}
+@media (min-width: 901px) {
+  .nx-process:has(> div:nth-child(6):last-child) > div:nth-child(3n) { border-inline-end: 0 !important; }
+  .nx-process:has(> div:nth-child(6):last-child) > div:nth-last-child(-n+3) { border-block-end: 0 !important; }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .nx-process:has(> div:nth-child(6):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nx-process:has(> div:nth-child(6):last-child) > div:nth-child(2n) { border-inline-end: 0 !important; }
+  .nx-process:has(> div:nth-child(6):last-child) > div:nth-last-child(-n+2) { border-block-end: 0 !important; }
+}
+@media (max-width: 600px) {
+  .nx-process:has(> div:nth-child(6):last-child) { grid-template-columns: minmax(0, 1fr); }
+  .nx-process:has(> div:nth-child(6):last-child) > div { border-inline-end: 0 !important; }
+  .nx-process:has(> div:nth-child(6):last-child) > div:last-child { border-block-end: 0 !important; }
+}
