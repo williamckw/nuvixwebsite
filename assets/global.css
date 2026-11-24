@@ -371,3 +371,16 @@ html,body{margin:0!important;padding:0!important;width:100%;min-height:100%;back
     margin-bottom:12px;
   }
 }
+
+/* Content additions reuse the existing colours and type scale. */
+.nx-faq details { padding: 1rem 0; border-bottom: 1px solid var(--l); }
+.nx-faq summary { cursor: pointer; font-weight: 600; }
+.nx-faq details p { margin: .75rem 0 0; }
+#project-enquiry { display: grid; gap: 1rem; max-width: 42rem; }
+#project-enquiry label { display: grid; gap: .35rem; }
+#project-enquiry input,
+#project-enquiry select,
+#project-enquiry textarea { color: inherit; background: #101021; border: 1px solid var(--l); border-radius: .5rem; padding: .65rem; font: inherit; width: 100%; }
+#project-enquiry button { justify-self: start; white-space: normal; }
+#project-enquiry a, .nx-legal a { text-decoration: underline; text-underline-offset: .2em; }
+.nx-site :focus-visible, .nx-foot :focus-visible { outline: 2px solid #90ecff; outline-offset: 4px; }
