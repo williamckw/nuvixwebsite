@@ -384,3 +384,32 @@ html,body{margin:0!important;padding:0!important;width:100%;min-height:100%;back
 #project-enquiry button { justify-self: start; white-space: normal; }
 #project-enquiry a, .nx-legal a { text-decoration: underline; text-underline-offset: .2em; }
 .nx-site :focus-visible, .nx-foot :focus-visible { outline: 2px solid #90ecff; outline-offset: 4px; }
+
+/* Service imagery retains the dark panels and existing responsive grid. */
+.nx-service-visual {
+  margin: 0;
+  overflow: hidden;
+  align-self: center;
+  border: 1px solid var(--l);
+  border-radius: 24px;
+  background: #0b0a1c;
+  box-shadow: 0 28px 80px rgba(0,0,0,.28);
+}
+.nx-service-visual img, .nx-service-card__image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+}
+.nx-service-visual figcaption {
+  display: grid;
+  gap: .35em;
+  padding: clamp(16px, 3vw, 26px);
+}
+.nx-service-visual figcaption strong { color: #fff; font-size: 1.15rem; }
+.nx-service-visual figcaption span { color: var(--m); line-height: 1.5; }
+.nx-service-card__image { overflow: hidden; border-radius: 14px; margin-bottom: 22px; background: #0b0a1c; }
+.nx-service-card.nx-list > p { display: block; margin-bottom: 18px; font-weight: 400; letter-spacing: normal; }
+
+.nx-service-visual__note { color: var(--m); font-size: .85rem; }
